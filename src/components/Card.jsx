@@ -1,7 +1,7 @@
-export default function Card({ img }) {
+export default function Card({ img, onClick }) {
   return (
-    <div>
+    <div className="card" onClick={onClick}>
       <img src={img} alt="pokemon img" />
     </div>
-  )
+  );
 }

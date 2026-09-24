@@ -1,5 +1,5 @@
 
-export default function ScoreBoard(){
+export default function ScoreBoard( {score, highScore} ){
 
     return(
         <div className="score-board">
@@ -11,8 +11,8 @@ export default function ScoreBoard(){
                 <p>click the card only once</p>
             </div>
             <div className="scores">
-                <p className="current-score">Score: 0</p>
-                <p className="high-score">Highest Score: 0</p>
+                <p className="current-score">Score: {score}</p>
+                <p className="high-score">Highest Score: {highScore}</p>
             </div>
             </div>
         </div>
