@@ -14,23 +14,23 @@ function App() {
 
 
   const pokemonNames = [
-  "pikachu",
-  "charizard",
-  "bulbasaur",
-  "squirtle",
-  "eevee",
-  "mewtwo",
-  "gengar",
-  "snorlax",
-  "lucario",
-  "greninja",
-  "gyarados",
-  "dragonite",
-  "jigglypuff",
-  "meowth",
-  "psyduck",
-  "blastoise"
-];
+    "pikachu",
+    "charizard",
+    "bulbasaur",
+    "squirtle",
+    "eevee",
+    "mewtwo",
+    "gengar",
+    "snorlax",
+    "lucario",
+    "greninja",
+    "gyarados",
+    "dragonite",
+    "jigglypuff",
+    "meowth",
+    "psyduck",
+    "blastoise"
+  ];
 
   useEffect(() => {
     async function getPokemon() {
@@ -54,23 +54,23 @@ function App() {
     }
 
     getPokemon();
-  }, []); 
-  
-  function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+  }, []);
 
-  function handleClick(id){
-    if(!clicked.includes(id)){
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function handleClick(id) {
+    if (!clicked.includes(id)) {
       setScore(score + 1);
       setClicked(prev => [...prev, id]);
     } else {
-      if(score>highScore){
+      if (score > highScore) {
         setHighScore(score);
       }
       setScore(0);

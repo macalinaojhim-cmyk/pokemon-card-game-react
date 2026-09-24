@@ -24,6 +24,10 @@ body {
   justify-content: space-around;
 }
 
+.scores p {
+  padding: 10px;
+}
+
 .pokemon-grid {
   width: 100%;
   display: grid;
